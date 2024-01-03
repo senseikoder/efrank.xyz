@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from '../components/Icon.astro';
+---
+
+<BaseLayout title="Frank Albarracin: CV" description="CV Resume - Frank albarracín">
+   
+
+   <section class="wrapper stack gap-8 lg:gap-208 skills">
+      <div class="stack gap-2 lg:gap-4">
+         <Icon icon="cube" color="var(--accent-regular)" size="2.5rem" gradient />
+         <h2>Web Design</h2>
+         <p>Provide an effective design to your website, tailored to your needs, which incorporates an attractive, professional, modern look and feel that stands out from the competition.</p>
+      </div>
+      <div class="stack gap-2 lg:gap-4">
+         <Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+         <h2>Web Development</h2>
+         <p>Web applications tailored to optimize your business. Convert your needs and ideas into an adaptive solution that gives real results, using the latest standards.</p>
+      </div>
+      <div class="stack gap-2 lg:gap-4">
+         <Icon icon="lifebuoy" color="var(--accent-regular)" size="2.5rem" gradient />
+         <h2>Website Support</h2>
+         <p>Maintenance and updating services according to your needs. Technical support for hosting and remote services</p>
+      </div>
+   </section>
+
+
+</BaseLayout>
+
+<style>
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		padding-inline: 3.5rem;
+
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
