@@ -1,0 +1,199 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+---
+
+<BaseLayout
+  title="Frank Albarracin: CV Resume"
+  description="CV Resume - Frank albarracín"
+>
+  <div class="stack gap-20 lg:gap-48">
+    <main class="wrapper stack gap-20 lg:gap-48">
+      <section class="wrapper stack gap-8 lg:gap-208 skills">
+        <div class="stack gap-4">
+          <h2>Education</h2>
+
+          <div class="stack gap-2">
+            <div class="year">2015</div>
+            <h3 class="subtitle">Security Diploma in Information Technology</h3>
+            <p>STIT Consultants</p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year">2014</div>
+            <h3 class="subtitle">Computer Engineering</h3>
+            <p>Universidad Politécnica del Oeste Mariscal Sucre</p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year">2009</div>
+            <h3 class="subtitle">Computer Technician</h3>
+            <p>
+              Instituto Universitario de Tecnología del Oeste Mariscal Sucre
+            </p>
+          </div>
+        </div>
+
+        <div class="stack gap-4">
+          <h2>Experience</h2>
+
+          <div class="stack gap-2">
+            <div class="year-long">2016 - Present</div>
+            <h3 class="subtitle">Facilitator - Tutor</h3>
+            <p><a href="https://uneweb.com" target="_blank">UneWeb</a></p>
+            <p>
+              Programming Diploma, Consultant Courses Online, Programming Tutor
+              projects.
+            </p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year-long">2015 - 2016</div>
+            <h3 class="subtitle">Support and Security Architecture</h3>
+            <p>
+              <a href="https://masquedigital.com" target="_blank"
+                >Más Que Digital</a>
+            </p>
+            <p>
+              Support and maintenance web platforms services. Management domains
+              and hosting company and customers.
+            </p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year-long">2011 - 2015</div>
+            <h3 class="subtitle">Technical Support Analyst</h3>
+            <p>
+              <a href="https://unispace.com.ve" target="_blank"
+                >Unispace Equipos</a>
+            </p>
+            <p>
+              Maintainer, adaptation and updating of computer platform and
+              server computers.
+            </p>
+          </div>
+        </div>
+
+        <div class="stack gap-8">
+          <h2>Skills</h2>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="code"
+              color="var(--accent-regular)"
+              size="2.5rem"
+              gradient
+            />
+            <p>HTML / CSS / Bulma / Bootstrap / Javascript / Vue</p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="code-block"
+              color="var(--accent-regular)"
+              size="2.5rem"
+              gradient
+            />
+            <p>PHP / NodeJS</p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="database"
+              color="var(--accent-regular)"
+              size="3rem"
+              gradient
+            />
+            <p>MySQL, PostGreSQL, SQLServer, SQLite, MongoDB</p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="hard-drives"
+              color="var(--accent-regular)"
+              size="3.8rem"
+              gradient
+            />
+            <p>
+              Windows / Ubuntu / Elementary OS / Windows Server / Hyper-V /
+              Docker
+            </p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="toolbox"
+              color="var(--accent-regular)"
+              size="3.5rem"
+              gradient
+            />
+            <p>Microsoft Office, LibreOffice, Google Workspace, Office 365</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 3.5rem;
+  }
+
+  .skills h2 {
+    font-size: var(--text-md);
+  }
+  .skills h3 {
+    font-size: var(--text-md);
+  }
+
+  .skills p {
+    color: var(--gray-400);
+  }
+
+  .year {
+    width: 25%;
+    text-align: center;
+    padding: 0.35rem 1.5rem;
+    color: var(--gray-800);
+    background: var(--accent-overlay);
+    font-weight: 600;
+  }
+
+  .year-long {
+    width: 50%;
+    text-align: center;
+    padding: 0.35rem 1.5rem;
+    color: var(--gray-800);
+    background: var(--accent-overlay);
+    font-weight: 600;
+  }
+
+  .stock {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+    }
+
+    .skills h2 {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

@@ -1,0 +1,212 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import ContactCTA from "../components/ContactoCTA.astro";
+import CallToAction from "../components/CallToAction.astro";
+---
+
+<BaseLayout
+  title="Frank Albarracin: CV Resume"
+  description="CV Resume - Frank albarracín"
+>
+  <div class="stack gap-20 lg:gap-48">
+    <main class="wrapper stack gap-20 lg:gap-48">
+      <section class="wrapper stack gap-8 lg:gap-208 skills">
+        <div class="stack gap-4">
+          <h2>Estudios</h2>
+
+          <div class="stack gap-2">
+            <div class="year">2015</div>
+            <h3 class="subtitle">Diplomado en Seguridad de la Información</h3>
+            <p>STIT Consultores</p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year">2014</div>
+            <h3 class="subtitle">Ingeniería Informática</h3>
+            <p>Universidad Politécnica del Oeste Mariscal Sucre</p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year">2009</div>
+            <h3 class="subtitle">TSU en Computación</h3>
+            <p>
+              Instituto Universitario de Tecnología del Oeste Mariscal Sucre
+            </p>
+          </div>
+        </div>
+
+        <div class="stack gap-4">
+          <h2>Experiencia</h2>
+
+          <div class="stack gap-2">
+            <div class="year-long">2016 - Actual</div>
+            <h3 class="subtitle">Facilitador - Tutor</h3>
+            <p><a href="https://uneweb.edu.ve" target="_blank">UneWeb</a></p>
+            <p>Diplomado de Programación, Tutor de proyectos de programación</p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year-long">2015 - 2016</div>
+            <h3 class="subtitle">Arquitectura de Soporte y Seguridad</h3>
+            <p>
+              <a href="https://masquedigital.com" target="_blank"
+                >Más Que Digital</a
+              >
+            </p>
+            <p>
+              Soporte y mantenimiento de plataforma. Webmaster de dominios y
+              hosting de empresa y clientes.
+            </p>
+          </div>
+
+          <div class="stack gap-2">
+            <div class="year-long">2011 - 2015</div>
+            <h3 class="subtitle">Analista de Soporte</h3>
+            <p>
+              <a href="https://unispace.com.ve" target="_blank"
+                >Unispace Equipos</a
+              >
+            </p>
+            <p>
+              Mantenimiento, adaptación y actualización de plataformas
+              informáticas, ordenadores y servidores.
+            </p>
+          </div>
+        </div>
+
+        <div class="stack gap-8">
+          <h2>Habilidades</h2>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="code"
+              color="var(--accent-regular)"
+              size="2.5rem"
+              gradient
+            />
+            <p>HTML / CSS / Bulma / Bootstrap / Javascript / Vue</p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="code-block"
+              color="var(--accent-regular)"
+              size="2.5rem"
+              gradient
+            />
+            <p>PHP / NodeJS</p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="database"
+              color="var(--accent-regular)"
+              size="3rem"
+              gradient
+            />
+            <p>MySQL, PostGreSQL, SQLServer, MongoDB</p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="hard-drives"
+              color="var(--accent-regular)"
+              size="3.8rem"
+              gradient
+            />
+            <p>
+              Windows / Ubuntu / Elementary OS / Windows Server / Hyper-V /
+              Docker
+            </p>
+          </div>
+
+          <div class="stock gap-2">
+            <Icon
+              icon="toolbox"
+              color="var(--accent-regular)"
+              size="3.5rem"
+              gradient
+            />
+            <p>Google Workspace, Office 365</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn-cv">
+        <CallToAction href="mailto:me@efrank.xyz" clases="resume">
+          Descargar CV
+          <Icon icon="file-pdf" size="1.2em" />
+        </CallToAction>
+      </div>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 1rem;
+  }
+
+  .skills h2 {
+    font-size: var(--text-md);
+  }
+  .skills h3 {
+    font-size: var(--text-md);
+  }
+
+  .skills p {
+    color: var(--gray-400);
+  }
+
+  .year {
+    width: 25%;
+    text-align: center;
+    padding: 0.35rem 1.5rem;
+    color: var(--gray-800);
+    background: var(--accent-overlay);
+    font-weight: 600;
+  }
+
+  .year-long {
+    width: 50%;
+    text-align: center;
+    padding: 0.35rem 1.5rem;
+    color: var(--gray-800);
+    background: var(--accent-overlay);
+    font-weight: 600;
+  }
+
+  .stock {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn-cv {
+    width: 350px;
+    margin: auto;
+  }
+
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+      padding-inline: 3.5rem;
+    }
+
+    .skills h2 {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>
