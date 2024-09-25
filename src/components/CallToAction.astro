@@ -7,7 +7,7 @@ interface Props {
 const { href, clases } = Astro.props;
 ---
 
-<a href={href} class={clases}><slot /></a>
+<a href={href} class={clases} target="_blank"><slot /></a>
 
 <style>
   a {
