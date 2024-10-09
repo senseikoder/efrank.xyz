@@ -1,0 +1,132 @@
+---
+import CallToAction from "./CallToAction.astro";
+import Icon from "./Icon.astro";
+import Image from "astro/components/Image.astro";
+
+import eShop from "../images/capture-degrado-efrank-.gif";
+// import eBistro from "../images/capture-degrado-efrank-.gif"
+import eBook from "../images/capture-escocleaning-efrank.gif";
+import eSite from "../images/capture-frenchp-efrank.gif";
+---
+
+<div class="wrapper stack">
+  <section class="section with-background">
+    <header class="section-header stack gap-2 lg:gap-4">
+      <h3>Elige tu plan</h3>
+      <p>Revisa ejemplos en vivo de clientes reales</p>
+    </header>
+  </section>
+
+  <section class="box skills">
+    <div class="plan stack gap-8 lg:gap-4">
+      <div class="stack gap-4">
+        <h2>eShop :: Tienda en Línea</h2>
+        <p>
+          Vende tus productos en línea, desarrollo de tiendas virtuales
+          (e-commerce) adaptadas a tu negocio, abierta 24/7 todo el año.
+        </p>
+        <p>
+          Incluye: Catálogo de productos, pasarelas de pago, ventas por WhatsApp
+          automatizadas, integración con redes sociales, dominio incluido.
+        </p>
+        <CallToAction href="https://wa.me/584122196858" clases="plans">
+          Comienza tu web
+          <Icon icon="whatsapp" size="1.2em" />
+        </CallToAction>
+      </div>
+
+      <figure>
+        <Image alt="Muestra diseño web en Wordpress" width="400" src={eShop} />
+      </figure>
+    </div>
+
+    <hr />
+
+    <div class="plan stack gap-8 lg:gap-4">
+      <div class="stack gap-4">
+        <h2>eBooking :: Sitios de Reservas o Citas</h2>
+        <p>
+          Ideal para: Hoteles, Salones de Spa, Médicos, Odontólogos, Gimnasios,
+          Consultores, Estudios de Yoga, Agencias de Viajes, etc.
+        </p>
+        <p>
+          Incluye: Sistema de programación de citas, listado de servicios,
+          gestión de pagos, panel de gestión, etc.
+        </p>
+        <CallToAction href="https://wa.me/584122196858" clases="plans">
+          Comienza tu web
+          <Icon icon="whatsapp" size="1.2em" />
+        </CallToAction>
+      </div>
+
+      <figure>
+        <Image alt="Muestra diseño web en Wordpress" src={eBook} width="400" />
+      </figure>
+    </div>
+
+    <hr />
+
+    <div class="plan stack gap-8 lg:gap-4">
+      <div class="stack gap-4">
+        <h2>eSite :: Sitios Web Informativos y Corporativos</h2>
+        <p>
+          Ideal para: organizaciones, instituciones educativas, bloggers, medios
+          de comunicación, empresas de servicios, corporaciones, profesionales
+          independientes, etc.
+        </p>
+        <p>
+          Incluye: Sección de blog, galerías multimedia, integración con redes
+          sociales, formularios de contacto, boletines informativos, etc.
+        </p>
+        <CallToAction href="https://wa.me/584122196858" clases="plans">
+          Comienza tu web
+          <Icon icon="whatsapp" size="1.2em" />
+        </CallToAction>
+      </div>
+
+      <figure>
+        <Image alt="Muestra diseño web en Wordpress" width="350" src={eSite} />
+      </figure>
+    </div>
+
+    <!-- <div class="stack gap-2 lg:gap-4">
+      <h2>eBistro :: Sitios para Restaurantes y Delivery</h2>
+      <p>
+        Comparte el link de tus productos con tus clientes o súbelo a tus Redes
+        Sociales y empieza a recibir pedidos.
+      </p>
+      <p>
+        Incluye: Sistema de pedidos online, menús QR, ventas por WhatsApp,
+        dominio incluido.
+      </p>
+      <CallToAction href="https://wa.me/584122196858" clases="plans">
+        Comienza tu web
+        <Icon icon="whatsapp" size="1.2em" />
+      </CallToAction>
+    </div> -->
+    
+  </section>
+
+  <style>
+    .wrapper {
+      max-width: 65rem;
+    }
+
+    figure {
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 50em) {
+      .stack.plan {
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6rem;
+      }
+    }
+  </style>
+</div>

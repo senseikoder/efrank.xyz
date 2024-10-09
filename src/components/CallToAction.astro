@@ -7,7 +7,7 @@ interface Props {
 const { href, clases } = Astro.props;
 ---
 
-<a href={href} class={clases} target="_blank"><slot /></a>
+<a href={href} class={clases}><slot /></a>
 
 <style>
   a {
@@ -31,9 +31,13 @@ const { href, clases } = Astro.props;
     background: var(--gradient-stroke);
   }
 
-  @media (min-width: 20em) {
+  @media (min-width: 40em) {
     a {
       font-size: var(--text-lg);
+    }
+
+    a.start, a.plans {
+      width: 60%;
     }
   }
 
@@ -56,6 +60,11 @@ const { href, clases } = Astro.props;
     a {
       padding: 1.125rem 2.5rem;
       font-size: var(--text-xl);
+    }
+    
+    a.plans {
+      padding: 1rem 1.7rem;
+      font-size: var(--text-md);
     }
   }
 </style>
