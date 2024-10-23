@@ -1,15 +1,16 @@
 ---
 title: Chocolates St. Moritz
-page: true
+page: false
 url: https://chocolatesstmoritz.com/
 publishDate: 2020-03-04 00:00:00
-img: /assets/chocolates-stmoritz.jpg
-img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
+img: /assets/capture-chocolatesstmoritz.webp
+img_alt: Chocolate 100% venezolano
 description: |
   We developed a virtual showcase for the softest bedding imaginable.
+overlay: rgba(41, 19, 12, .75)
 tags:
-  - Design
-  - Dev
+  - Diseño
+  - Wordpress
   - Branding
 ---
 

@@ -2,8 +2,8 @@
 title: Zamora Listings
 page: false
 url: https://zamoralistings.com
-publishDate: 2020-03-02 00:00:00
-img: /assets/zamoralistings.jpg
+publishDate: 2017-03-02 00:00:00
+img: /assets/capture-zamoralistings.webp
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
   We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!

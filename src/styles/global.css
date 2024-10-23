@@ -20,7 +20,7 @@
 	--accent-regular: #6fa611;
 	--accent-dark: #385600;
 	--accent-overlay: hsla(137, 56%, 33%, 0.63);
-	--accent-subtle-overlay: hsla(123, 63%, 63%, 0.657);
+	--accent-subtle-overlay: hsla(123, 63%, 63%, 0.85);
 	--accent-text-over: var(--gray-999);
 	--accent-orange: #ff6633;
 

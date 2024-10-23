@@ -5,6 +5,11 @@ import { getCollection } from "astro:content";
 
 // Content Fetching: List four most recent work projects
 const projects = await getCollection("work");
+const sortedProjects = projects.sort(
+  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+const limitedProjects = sortedProjects.slice(0, 6);
 ---
 
 <main class="wrapper stack gap-20 lg:gap-48">
@@ -20,7 +25,7 @@ const projects = await getCollection("work");
     <div class="gallery">
       <Grid variant="offset">
         {
-          projects.map((project) => (
+          limitedProjects.map((project) => (
             <li>
               <PortfolioPreview project={project} />
             </li>
