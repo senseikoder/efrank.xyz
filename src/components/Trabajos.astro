@@ -1,24 +1,27 @@
 ---
 import Grid from "./Grid.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
+import CallToAction from "../components/CallToAction.astro";
 import { getCollection } from "astro:content";
 
 // Content Fetching: List four most recent work projects
 const projects = await getCollection("work");
 const sortedProjects = projects.sort(
-  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+  (a, b) =>
+    new Date(b.data.publishDate).getTime() -
+    new Date(a.data.publishDate).getTime()
 );
 
 const limitedProjects = sortedProjects.slice(0, 6);
 ---
 
-<main class="wrapper stack gap-20 lg:gap-48">
+<main class="wrapper stack gap-20">
   <section class="section with-background" id="trabajos">
     <header class="section-header stack gap-2 lg:gap-4">
       <h3>Trabajos realizados</h3>
       <p>
-        Eche un vistazo a continuación a algunos de mis trabajos destacados de
-        los últimos años.
+        Echa un vistazo a continuación a algunos de mis trabajos de los últimos
+        años.
       </p>
     </header>
 
@@ -34,4 +37,15 @@ const limitedProjects = sortedProjects.slice(0, 6);
       </Grid>
     </div>
   </section>
+
+  <div class="btn-more">
+    <CallToAction href="/portafolio"> Ver más </CallToAction>
+  </div>
 </main>
+
+<style>
+  .btn-more {
+    width: 350px;
+    margin: auto;
+  }
+</style>

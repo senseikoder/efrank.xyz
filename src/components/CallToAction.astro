@@ -28,7 +28,7 @@ const { href, clases } = Astro.props;
   }
 
   a.resume {
-    background: var(--gradient-stroke);
+    background: var(--gradient-stop-1);
   }
 
   @media (min-width: 40em) {
@@ -36,7 +36,8 @@ const { href, clases } = Astro.props;
       font-size: var(--text-lg);
     }
 
-    a.start, a.plans {
+    a.start,
+    a.plans {
       width: 60%;
     }
   }
@@ -61,7 +62,7 @@ const { href, clases } = Astro.props;
       padding: 1.125rem 2.5rem;
       font-size: var(--text-xl);
     }
-    
+
     a.plans {
       padding: 1rem 1.7rem;
       font-size: var(--text-md);

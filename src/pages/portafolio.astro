@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactoCTA.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Grid from "../components/Grid.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
+import { getCollection } from "astro:content";
+
+// Content Fetching: List four most recent work projects
+const projects = await getCollection("work");
+---
+
+<BaseLayout
+  title="Frank Albarracin: Resumen CV"
+  description="Resumen curricular - Frank Albarracín"
+>
+  <div class="stack gap-20 lg:gap-48">
+    <main class="wrapper stack gap-20">
+      <section class="section with-background" id="trabajos">
+        <header class="section-header stack gap-2 lg:gap-4">
+          <h3>Portafolio Web</h3>
+          <!-- <p>
+            Echa un vistazo a continuación a algunos de mis trabajos de los
+            últimos años.
+          </p> -->
+        </header>
+
+        <div class="gallery">
+          <Grid variant="offset">
+            {
+              projects.map((project) => (
+                <li>
+                  <PortfolioPreview project={project} />
+                </li>
+              ))
+            }
+          </Grid>
+        </div>
+      </section>
+
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
