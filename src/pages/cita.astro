@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import ContactCTA from "../components/ContactoCTA.astro";
+import CallToAction from "../components/CallToAction.astro";
+---
+
+<BaseLayout
+  title="Frank Albarracin: Hablemos de trabajo"
+  description="Programa una cita - Frank Albarracín"
+>
+  <div class="stack gap-20 lg:gap-48">
+    <main class="wrapper stack gap-20 lg:gap-48">
+      <!-- Google Calendar Appointment Scheduling begin -->
+      <iframe
+        src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1MdqzYQ6A9nt8ciLkdYJ3bMXmQojTuBRpQXzdn_KESl_s5rSTUI4XYFBFZooYMdm0Wn844TaaA?gv=true"
+        style="border: 0"
+        width="100%"
+        height="1000"
+        frameborder="0"></iframe>
+      <!-- end Google Calendar Appointment Scheduling -->
+    </main>
+  </div>
+</BaseLayout>
+
+
+<style>
+   .wrapper {
+      background-color: #fff;
+      border-radius: 1.5rem;
+   }
+</style>
